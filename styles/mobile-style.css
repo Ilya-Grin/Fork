@@ -1,0 +1,41 @@
+@media (max-width: 768px) {
+	.container {
+		max-width: 768px;
+	}
+	.header__body {
+		justify-content: center;
+		flex-direction: column;
+	}
+	.header__subtitle {
+		margin: 10px 0 0 0;
+	}
+	html,
+	body {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 425px) {
+	.container {
+		max-width: 425px;
+	}
+	.fork-logo {
+		font-size: 28px;
+	}
+	.header__subtitle {
+		display: none;
+	}
+
+	.main__body {
+		min-height: auto;
+		margin: 0;
+	}
+	.main__block {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.main__input {
+		margin: 10px 0;
+	}
+}
