@@ -23,6 +23,8 @@ const App = {
 		inversionSum() {
 			this.inversion[0] = (1 / Number(this.buttonNumbers[0])) + (1 / Number(this.buttonNumbers[1]));
 			this.inversion[1] = (1 / Number(this.buttonNumbers[2])) + (1 / Number(this.buttonNumbers[3]));
+			this.inversion[0] = this.inversion[0].toFixed(3);
+			this.inversion[1] = this.inversion[1].toFixed(3);
 		}
 	}
 }
