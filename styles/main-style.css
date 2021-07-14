@@ -41,13 +41,18 @@ body {
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	overflow: hidden;
+	overflow: auto;
 }
 
 input,
 button,
 textarea {
 	font-family: inherit;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 input ::-ms-clear {
@@ -143,6 +148,7 @@ h6 {
 }
 .main__title {
 	margin: 10px 0;
+	font-weight: 500;
 	text-transform: uppercase;
 }
 .main__input {
@@ -153,9 +159,19 @@ h6 {
 }
 .main__button {
 	margin: 20px 0;
+	font-weight: 500;
 	color: #fff;
 	background: #d63030;
 	border-radius: 5px;
 	padding: 10px 15px;
 	font-size: 14px;
+}
+.alert-message {
+	color: #da1d1d;
+	font-weight: 700;
+	font-style: 24px;
+	-webkit-text-stroke: 0.5px #000000;
+}
+.main__block span {
+	margin: 10px 0;
 }

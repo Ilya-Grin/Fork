@@ -38,26 +38,42 @@
 	</header>
 	<!--Main Sections-->
 	<main class="main">
-		<div class="container">
-			<div class="main__body">
+		<div class="container" id="app">
+			<div class="main__body" v-if="counter">
 				<p class="main__title">Букмекер 1</p>
 				<div class="main__block">
-					<input class="main__input" type="number" name="team1" placeholder="Коэффициент 1">
-					<input class="main__input" type="number" name="team2" placeholder="Коэффициент 2">
+					<input class="main__input" v-model="numbers[0]" type="number" name="team1"
+						placeholder="Коэффициент 1">
+					<input class="main__input" v-model="numbers[1]" type="number" name="team2"
+						placeholder="Коэффициент 2">
 				</div>
 				<p class="main__title">Букмекер 2</p>
 				<div class="main__block">
-					<input class="main__input" type="number" name="team1" placeholder="Коэффициент 1">
-					<input class="main__input" type="number" name="team2" placeholder="Коэффициент 2">
+					<input class="main__input" v-model="numbers[2]" type="number" name="team1"
+						placeholder="Коэффициент 1">
+					<input class="main__input" v-model="numbers[3]" type="number" name="team2"
+						placeholder="Коэффициент 2">
 				</div>
 				<p class="main__title">Бюджет</p>
 				<div class="main__block">
-					<input class="main__input" type="number" name="money" placeholder="Сумма">
+					<input class="main__input" v-model="numbers[4]" type="number" name="money" placeholder="Сумма">
 				</div>
-				<button class="main__button">Рассчитать</button>
+				<p class="main__title alert-message">{{ alert }}</p>
+				<button class="main__button" @click="buttonClick">Рассчитать</button>
+			</div>
+			<div class="main__body" v-else>
+				<p class="main__title">Сумма инверсии</p>
+				<div class="main__block">
+					<span>Букмекер 1: {{ inversion[0].toFixed(3) }}</span>
+					<span>Букмекер 2: {{ inversion[1].toFixed(3) }}</span>
+				</div>
+				<a href="/" class="main__button">Вернуться назад</a>
 			</div>
 		</div>
 	</main>
+
+	<script src="https://unpkg.com/vue@next"></script>
+	<script src="scripts/main-script.js"></script>
 </body>
 
 </html>
